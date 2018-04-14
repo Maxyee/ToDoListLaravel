@@ -34,7 +34,6 @@
 
     <div class="panel-body">
         @if(count($tasks) > 0)
-        {
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Current Tasks
@@ -57,11 +56,17 @@
                                 <tr>
                                     <!-- Task Name -->
                                     <td class="table-text">
-                                        <div>{{ $task->name }}</div>
+                                        <div style="color:red">{{ $task->name }}</div>
                                     </td>
     
                                     <td>
                                         <!-- TODO: Delete Button -->
+                                        <form action="/task/{{ $task->id }}" method="POST">
+                                            {{ csrf_field() }}
+                                            {{ method_field('DELETE') }}
+
+                                            <button>Delete Task</button>
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach
