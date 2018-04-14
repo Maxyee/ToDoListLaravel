@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    ToDoList In Laravel Work
+                    Laravel
                 </div>
 
                 <div class="links">

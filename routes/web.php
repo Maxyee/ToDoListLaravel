@@ -1,8 +1,5 @@
 <?php
 
-
-use App\Task;
-use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,38 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-
-// task table all routes starts from here --->
-Route::get('/', function () {
-    return view('tasks');
+Route::get('/tasks', function () {
+    return "this is a task page";
 });
-
-Route::post('/task', function (Request $request) {
-    //
-});
-
-/**
- * Delete An Existing Task
- */
-Route::delete('/task/{id}', function ($id) {
-    //
-});
-
-// task table all routes ends here --->
-
-
-// Route::get('/home', function (){
-//     return view('login');
-// });
-
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-//Route::get('/login', 'HomeController@login')->name('login');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
