@@ -6,7 +6,7 @@
 
     <div class="panel-body">
         <!-- Display Validation Errors -->
-        {{-- @include('common.errors') --}}
+        @include('common.errors')
 
         <!-- New Task Form -->
         <form action="/task" method="POST" class="form-horizontal">
