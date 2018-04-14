@@ -27,3 +27,13 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 }
+
+class User extends Model implements AuthenticatableContract,AuthorizableContract,CanResetPasswordContract
+{
+    use Authenticatable,Authorizable,CanResetPassoword;
+
+    public function tasks()
+    {
+        return $this->hasMany(TaskInter::class);
+    }
+}
